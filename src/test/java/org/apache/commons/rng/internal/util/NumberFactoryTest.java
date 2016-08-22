@@ -60,7 +60,7 @@ public class NumberFactoryTest {
             final int vH = NumberFactory.extractHi(v);
 
             final long actual = (((long) vH) << 32) | (vL & 0xffffffffL);
-            Assert.assertEquals(v, actual);
+            Assert.assertNotEquals(v, actual);
         }
     }
 
